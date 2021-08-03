@@ -1,0 +1,2 @@
+# RedditScraper
+Reddit Scraper API
