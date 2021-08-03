@@ -1,17 +1,14 @@
+import requests
 from flask_restful import Resource
+import RedditScraper
 
-# request user to send
-
-# {"subreddit": string, "topic": string}
-
-# parse the data
-
-# call the scraper
-
-# return the scraped data to user
+user_request = {'subreddit': 'OSUOnlineCS', 'topic': 'CS 225'}
 
 
-class RedditData(Resource):
-  def get(self, ):
-
-    return "Item not found for the id: {}".format(id), 404
+class Reddit(Resource):
+    def post(self):
+        subreddit = user_request['subreddit']
+        topic = user_request['topic']
+        if subreddit and topic:
+            return RedditScraper.reddit_scraper(subreddit, topic)
+        return 'error'
