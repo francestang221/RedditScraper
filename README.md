@@ -8,6 +8,8 @@ https://reddit361.herokuapp.com/reddit
 Accept JSON HTTP POST Request formatted like this:
 {"subreddit": "OSUOnlineCS", "topic": "Aleks"}
 
+It will return the top 10 most recent posts that match your search criteria.
+
 Replace "OSUOnlineCS" with a subreddit name of your choice
 Replace "Aleks" with a topic of your choice (space allowed)
 
