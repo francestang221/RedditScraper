@@ -1,14 +1,17 @@
-import requests
+from flask import request
 from flask_restful import Resource
 import RedditScraper
-
-user_request = {'subreddit': 'OSUOnlineCS', 'topic': 'CS 225'}
+import json
 
 
 class Reddit(Resource):
     def post(self):
+        user_request = json.loads(request.data)
+        print(user_request)
         subreddit = user_request['subreddit']
         topic = user_request['topic']
-        if subreddit and topic:
-            return RedditScraper.reddit_scraper(subreddit, topic)
-        return 'error'
+        return json.loads(RedditScraper.reddit_scraper(subreddit, topic))
+
+        #  WIP: error handling
+        # check if subreddit exists
+        # status code check
