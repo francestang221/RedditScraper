@@ -5,7 +5,7 @@ Hosted on Heroku:
 
 https://reddit361.herokuapp.com/reddit
 
-Accept HTTP POST Request:
+Accept JSON HTTP POST Request formatted like this:
 {"subreddit": "OSUOnlineCS", "topic": "Aleks"}
 
 Replace "OSUOnlineCS" with a subreddit name of your choice
